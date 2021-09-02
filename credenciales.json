@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ecommerce-pokefish",
+  "private_key_id": "90480846eddd2d057e38dd01e12843012cddae03",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCYtJZCq558D3Oe\nyQqNLj/JDiMGK95PDysyTTSjc36KDEveWjefSgABYTzKi1SeWRGAi+wAJqpgLEuz\nkZlNTlL0nNZOox059b9jXyei7f9y8h7iqsqkpDOim1mO+qM+83QFKl2nxxg+A08W\n0A5PWnpWbLxs9XLmy1LuLi85DZ0qV/UAWltKRG4cMJKJvkFeHdZY0U/W0jBeSo19\n3UikQuYjqYMXm0LUBwU03dfuPiChgXeCquzWP0jvxlTBzPtXEJWWxxKPfLHv6CGw\np+qOgsV3OQAi71Q4xbbxEk5IpUFOkUF2sFILbfjWiwOFaX/xMlaNU4Mj4lDpl1eJ\nq61BG2oJAgMBAAECggEASnS+0Rohx8a27sSCpwzWX/9LF367QdwZCUk4sbumBsRx\nF6TwevPXZdTWEcH2y9CM5psSwo4Xw5XFgXQsBdP7QbbZDXWd0f1fSKIETv5xb8fb\nRFTXQoinfpD1jW/quc51kvExwhUi3lW5sdtXJtzsSohxJUVWNW8M7AJL1ysqpxKE\nFX6qwiMsSVF7bWB4Gy5KPKw+ZSe/rEx2JojCC/Y6uYPNzycbIbN/Tnm93VAgIUAS\n35pnBypiuqGkHqa3at6WPGlv/1y52NjRih8APEwVG9qzHPj7zKIlZKVVEy9dt56e\nf39XmWSIefw21hXOU3y81HAmZ0nXqFRANl/vpeC9swKBgQDJQvVoOC45oFTE8WeW\nmFFy4oYjKVv88KnTb0KkY804F3qrVQzjPlu768Xem28VW+jv+2413xogvo2UGiWk\nwvzcoG+eyWSn7TrNvWqlfPwFTqwX/6l6xM+vDTiRZ1yhfJa8H8G5lavXzmHvHES6\nqjUf18S83+8ANJuXGPQanVRJbwKBgQDCPNuJPNwv58ckzeAgbT7Mw5ybE0sZ2fsX\neEuKXX+vQmVVbVDMr3DRrwWuYm1TVt3jFL6BlsbdIBo2DCdkR/4puwo3E70PYKQv\nD+t3dS1xw3Cv2jVLs9YY4kU+sksYum82vi4a5ksTqSTStwRoyI+TRXuGPSeiU12G\nwuOD3kUYBwKBgC93xGulPHnI79VXXmgtWqBu/tYSLij1FgjRJ/WfuEovd3YrZBPA\npGApFo0POd7ew4y+T1sTWJU6fCffFtvKRVs/17OqqjvU/taBg0KuvL3/tSUf3ngf\nLSCLTLk2mKlZui96ifVccKBAg+aiUy93b3ooKLWnVzZEMiIr937DdpqvAoGAPL7r\nqa/u7Mx/63K3dWy1BzTl9VnDUwJpFJ36gftbw2PwbRcS/fCgR/OEw1Tk+/teyXXj\nXoPZDa7Mg7qpVyNsyYBFYZQ6vGRs9Ir2CRYMcFe/FkAYCuTjQEUDgugftEwaG/S+\nVotPT4bGjV/PcTXIMTa5uvHFQ27vAQZSQRtyYGECgYALCq7LTGGR/lshk/sFamre\nu5o+1DZ6Po3j8RpQVGvVrzECH1YlHf2Bcf6CXE9uRhhpaOkRgqGN5XPFO6ke0DGU\noXAEM+cP7e2dX4rhSOn6X2rSzHr50rs0E1pgoKtSq+GgTYcV812qwf1USFVCVJE6\nGyRbQru4SAa2eyuXTbl3kA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-whb4q@ecommerce-pokefish.iam.gserviceaccount.com",
+  "client_id": "111171845884538108918",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-whb4q%40ecommerce-pokefish.iam.gserviceaccount.com"
+}
