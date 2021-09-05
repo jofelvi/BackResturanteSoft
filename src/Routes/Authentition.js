@@ -7,7 +7,29 @@ const rutasProtegidas = require("../middleware/ProtectRoute");
 require('dotenv').config()
 
 router.post("/api/login",  async (req, res ,next)=>{
-    if(req.body.usuario === "admin" && req.body.contrasena === "1234") {
+
+    try {
+        const payload = {
+            check:  true,
+            role: "admin",
+            nombre: "jonathan",
+            UserId: "124552"
+        };
+        const token = jwt.sign(payload, process.env.KEYTOKEN, {
+            expiresIn: 1440
+        });
+        res.json({
+            mensaje: 'Autenticación correcta',
+            token: token
+        });
+    }catch(e){
+        console.log("error", e)
+        return res.status(500).json({ "error": e})
+    }
+
+  /*  if(req.body.email !== "" && req.body.password !== "") {
+        await db.collection("Users").where("email", "==", req.body.email ).where( "password", "==" ,req.body.password)
+
         const payload = {
             check:  true,
             role: "admin",
@@ -23,7 +45,7 @@ router.post("/api/login",  async (req, res ,next)=>{
         });
     } else {
         res.json({ mensaje: "Usuario o contraseña incorrectos"})
-    }
+    }*/
 })
 
 module.exports = router

@@ -1,7 +1,7 @@
 const express = require('express')
 const admin = require('firebase-admin')
 
-let serviceAccount = require('./credenciales.json');
+let serviceAccount = require('../credenciales.json');
 
 //firebase.initializeApp(serviceAccount);
 

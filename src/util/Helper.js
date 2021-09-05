@@ -1,4 +1,5 @@
 //for checking empty string or not
+const {db} = require("../DbConnect");
 const isEmpty = (string) => {
     if (string.trim() === '') {
         return true;
@@ -45,4 +46,14 @@ exports.validateLoginData = (data) => {
         errors,
         valid: Object.keys(errors).length === 0 ? true : false
     }
+}
+
+exports.verificateEmailDb = ()=>{
+    db.collection("users"). orderByChild("username").equalTo(username_here).on("value", function(snapshot) {
+        if (snapshot.exists()) {
+            console.log("exists");
+        }else{
+            console.log("doesn't exist");
+        }
+    });
 }
