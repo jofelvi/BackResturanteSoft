@@ -29,10 +29,7 @@ router.post("/api/stores",
             await Stores.create({
                 name: name,
                 owner: owner,
-                userId: [{
-                    id: userId
-                }]},{
-                include: [ Creator ]
+                userId: userId
             }).then( async (storeCreated) => {
                 return res.status(200).json(storeCreated)
             }).catch((e) => {
