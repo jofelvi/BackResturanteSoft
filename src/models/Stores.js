@@ -1,4 +1,3 @@
-const UsersModels = require("./Users");
 
 module.exports = (sequelize, type) => {
 
@@ -25,5 +24,4 @@ module.exports = (sequelize, type) => {
     )
 }
 
-//StoresModels.hasMany(UsersModels, {foreignKey: 'userId', sourceKey: 'id'})
-//Users.belongsTo(StoresModels, {foreignKey: 'userId', sourceKey: 'id'})
+

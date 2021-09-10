@@ -48,12 +48,16 @@ exports.validateLoginData = (data) => {
     }
 }
 
-exports.verificateEmailDb = ()=>{
-    db.collection("users"). orderByChild("username").equalTo(username_here).on("value", function(snapshot) {
+exports.verificateEmailDb = () => {
+    db.collection("users").orderByChild("username").equalTo(username_here).on("value", function (snapshot) {
         if (snapshot.exists()) {
             console.log("exists");
-        }else{
+        } else {
             console.log("doesn't exist");
         }
     });
+
+
+
+
 }

@@ -1,45 +1,11 @@
 import {Users} from "../database/database";
-
 const express = require('express');
 const router = express.Router();
 const rutasProtegidas = require("../middleware/ProtectRoute");
 const bcrypt = require('bcrypt');
 const {check, validationResult} = require('express-validator');
 
-router.post("/api/usuario", rutasProtegidas,
-            [   check('name', 'El nombre es obligatorio').not().notEmpty(),
-                check('lastName', 'El Apellido es obligatorio').not().notEmpty(),
-                check('password', 'El password es obligatorio').not().notEmpty(),
-                check('role', 'El rol es obligatorio').not().notEmpty(),
-                check('email', 'El email es obligatorio y debe tener un formato valido').isEmail().notEmpty()],
-    async (req, res, next) => {
-        const {name, lastName, role, email} = req.body
-        req.body.password = bcrypt.hashSync(req.body.password, 10)
 
-        const errors = validationResult(req)
-
-        if (!errors.isEmpty()){
-            return res.status(422).json({"errors": errors.array()})
-        }
-
-        try {
-             await Users.create({
-                name: name,
-                lastName: lastName,
-                password: req.body.password,
-                email: email,
-                role: role
-            }).then((userCreated) => {
-                return res.status(200).json({userCreated})
-            }).catch((e) => {
-                console.log("error al guardar", e)
-                return res.status(200).json({"Error": e})
-            })
-        } catch (e) {
-            console.log("error", e)
-            return res.status(500).json({"error": e})
-        }
-    })
 
 router.get("/api/usuario/:usuario_id", rutasProtegidas, (req, res) => {
     (async () => {
@@ -59,7 +25,9 @@ router.get("/api/usuario/:usuario_id", rutasProtegidas, (req, res) => {
     })();
 });
 
-router.get("/api/usuarios", rutasProtegidas, async (req, res) => {
+router.get("/api/usuarios",
+    rutasProtegidas,
+    async (req, res) => {
     try {
         const users = await Users.findAll()
         return res.status(200).json(users);
@@ -70,7 +38,7 @@ router.get("/api/usuarios", rutasProtegidas, async (req, res) => {
 
 router.put("/api/usuario/:usuario_id", rutasProtegidas, async (req, res) => {
     try {
-        const {name, lastName, password, role, email} = req.body
+        const {name, lastName, role, email} = req.body
         const {usuario_id} = req.params
         req.body.password = bcrypt.hashSync(req.body.password, 10)
 

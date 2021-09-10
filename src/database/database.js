@@ -21,6 +21,10 @@ const sequelize = new Sequelize(
 const Users = UsersModels(sequelize, Sequelize)
 const Stores = StoresModels(sequelize, Sequelize)
 
+Stores.hasMany(Users, {foreignKey: 'userId', sourceKey: 'id'})
+Users.belongsTo(Stores, {foreignKey: 'userId', sourceKey: 'id'})
+
+
 sequelize.sync({force: false}).then(()=>{
     console.log("tablas sincronizadas")
 }).catch((e)=>{
