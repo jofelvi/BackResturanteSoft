@@ -22,7 +22,6 @@ router.post("/api/login",  async (req, res ,next)=>{
         }else {
             res.json({ mensaje: "Usuario incorrecto"})
         }
-
     }catch(e){
         console.log("error", e)
         return res.status(500).json({ "error": e})
@@ -56,7 +55,6 @@ router.post("/api/createusuario",
             }).then( async (userCreated) => {
                 let user = createToken(userCreated)
                 return res.status(200).json(user)
-
             }).catch((e) => {
                 console.log("error al guardar", e)
                 return res.status(200).json({"Error": e})

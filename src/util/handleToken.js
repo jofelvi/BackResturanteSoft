@@ -9,7 +9,8 @@ export  const createToken = (user) => {
     const payload = {
         role: user.role,
         nombre: user.name,
-        UserId: user.id
+        UserId: user.id,
+        storeId: user.storeId
     };
     const token = jwt.sign(payload, process.env.KEYTOKEN, {
         expiresIn: 1440

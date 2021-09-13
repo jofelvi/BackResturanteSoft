@@ -33,8 +33,16 @@ const getIdByToken = (req)=>{
     return payload.UserId
 }
 
+const getStoreIdByToken = (req)=>{
+    const token = req.headers['access-token']
+    let payload = jwt.decode(token,  process.env.KEYTOKEN)
+    console.log("decode token", payload)
+    return payload.storeId
+}
+
 module.exports = {
     checkToken:checkToken,
-    getIdByToken: getIdByToken
+    getIdByToken: getIdByToken,
+    getStoreIdByToken: getStoreIdByToken
 }
 

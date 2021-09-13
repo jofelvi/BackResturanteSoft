@@ -12,12 +12,12 @@ app.use(express.json())
 app.use(morgan("dev"))
 app.use(require('./Routes/Usuarios' , middlewaresToken.checkToken));
 app.use(require('./Routes/Stores' , middlewaresToken.checkToken));
+app.use(require('./Routes/Mesas' , middlewaresToken.checkToken));
+app.use(require('./Routes/Customers' , middlewaresToken.checkToken));
 app.use(require('./Routes/Authentition'));
 
 let port = process.env.PORT || 8000;
 app.set('port', port);
-
-
 
 app.listen(port, () => console.log(`Server Node ${port}`));
 

@@ -1,4 +1,4 @@
-import {Stores, Users} from "../database/database";
+import {Stores, Users, Mesas} from "../database/database";
 import {getIdByToken} from "../middleware/CheckToken";
 import sequelize from "sequelize";
 const express = require('express');
