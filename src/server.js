@@ -1,6 +1,6 @@
 import express from 'express'
 import morgan from 'morgan'
-import {checkToken} from "../dist/middleware/CheckToken";
+import middlewaresToken from "./middleware/CheckToken"
 import dotenv from 'dotenv'
 import './database/database'
 dotenv.config()
@@ -12,10 +12,10 @@ app.set('llave', process.env.KEYTOKEN);
 
 app.use(express.json())
 app.use(morgan("dev"))
-app.use(require('./Routes/Usuarios' , checkToken));
-app.use(require('./Routes/Stores' , checkToken));
-app.use(require('./Routes/Mesas' , checkToken));
-app.use(require('./Routes/Customers' , checkToken));
+app.use(require('./Routes/Usuarios' , middlewaresToken.checkToken));
+app.use(require('./Routes/Stores' , middlewaresToken.checkToken));
+app.use(require('./Routes/Mesas' , middlewaresToken.checkToken));
+app.use(require('./Routes/Customers' , middlewaresToken.checkToken));
 app.use(require('./Routes/Authentition'));
 
 const port = process.env.PORT || 8000;
